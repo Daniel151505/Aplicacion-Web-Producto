@@ -33,6 +33,11 @@ https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/3.1.4
 
 https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL/3.1.4
 
+# Despues de instalar paquetes
+
+Ejecutar la siguiente instrucción: 
+dotnet aspnet-codegenerator identity -dc AplicacionWebProducto.Data.ApplicationDbContext --files "Account.vista que quieren"
+
 # Instalar herramienta
 
 https://docs.microsoft.com/en-us/ef/core/cli/dotnet
