@@ -12,5 +12,7 @@ namespace AplicacionWebProducto.Data
             : base(options)
         {
         }
+
+        public DbSet<AplicacionWebProducto.Models.Contacto> Contactos {get;set;}
     }
 }
