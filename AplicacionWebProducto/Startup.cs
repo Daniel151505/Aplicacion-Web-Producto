@@ -68,7 +68,7 @@ namespace AplicacionWebProducto
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Contacto}/{action=Listar}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
