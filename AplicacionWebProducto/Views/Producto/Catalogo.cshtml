@@ -1,0 +1,29 @@
+@model IEnumerable<AplicacionWebProducto.Models.Producto>
+
+@{
+    ViewData["Title"] = "Catalogo de Productos";
+}
+<h1 style="text-align:center;">Catalogo de Productos</h1>
+
+<table class="table table-hover" style="text-align: center;">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">@Html.DisplayNameFor(model => model.Name)</th>
+      <th scope="col">@Html.DisplayNameFor(model => model.Image)</th>
+      <th scope="col">@Html.DisplayNameFor(model => model.Price)</th>
+    </tr>
+  </thead>
+  <tbody>
+
+   @foreach (var item in Model)
+   {
+
+    <tr>
+      <th scope="row">@Html.DisplayFor(modelItem => item.Name)</th> 
+      <td> <img src="@item.Image" alt="" width="400px" height="400px"></td>
+      <td>S/.@Html.DisplayFor(modelItem => item.Price)</td>
+    </tr>
+
+   }
+  </tbody>
+</table>
