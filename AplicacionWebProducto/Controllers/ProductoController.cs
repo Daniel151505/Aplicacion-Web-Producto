@@ -111,7 +111,18 @@ namespace AplicacionWebProducto.Controllers
         //editar
 
          
+        //eliminar
+        public IActionResult Eliminar (int? id){
 
+                var producto= _context.Productos.Find(id);
+                _context.Productos.Remove(producto);
+                _context.SaveChanges();
+
+                return RedirectToAction(nameof(Index));
+
+         }
+        //eliminar
+   
     
     }
 }
