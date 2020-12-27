@@ -1,0 +1,39 @@
+@model AplicacionWebProducto.Models.Producto
+
+@{
+    ViewData["Title"] = "Editar Productos";
+}
+ <h1 style="text-align: center;">Editar Productos</h1>
+
+<div class="container col-md-5">
+   
+  <form asp-controller="Producto" asp-action="Editar">
+
+     <div>
+         <label asp-for="Name" class="control-label"></label>
+         <input asp-for="Name" class="form-control"> 
+         <span asp-validation-for="Name" class="text-danger"></span> 
+     </div> 
+
+      <div>
+         <label asp-for="Image" class="control-label"></label>
+         <input asp-for="Image" class="form-control"> 
+          <span asp-validation-for="Image" class="text-danger"></span> 
+     </div> 
+
+      <div>
+         <label asp-for="Price" class="control-label"></label>
+         <input asp-for="Price" class="form-control" >
+         <span asp-validation-for="Price" class="text-danger"></span>  
+     </div> 
+
+     <br>
+     <div style="text-align:center;" >
+         <button type="submit" class="btn btn-primary">Editar</button>
+     </div>
+
+  </form>
+
+</div>
+
+ 
