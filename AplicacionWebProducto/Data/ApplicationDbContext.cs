@@ -14,5 +14,6 @@ namespace AplicacionWebProducto.Data
         }
 
         public DbSet<AplicacionWebProducto.Models.Contacto> Contactos {get;set;}
+        public DbSet<AplicacionWebProducto.Models.Producto> Productos {get;set;}
     }
 }
