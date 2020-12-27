@@ -62,6 +62,56 @@ namespace AplicacionWebProducto.Controllers
          return View ("Registro",objProducto);
 
         }
+
+        //editar
+        public async Task<IActionResult> Editar (int ? id){
+        
+            if(id == null){
+            return NotFound();
+            }else{
+                
+                var producto= await _context.Productos.FindAsync(id);
+                if(producto == null){
+                    return NotFound();
+                }
+                else{
+                    return View(producto);
+                }
+
+            }
+
+        }
+
+       
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> Editar (int id, [Bind("Id,Name,Image,Price")] Producto objProducto ){
+
+            if(id !=objProducto.Id){
+                return NotFound();
+            }
+
+            if(ModelState.IsValid){
+            try{
+                _context.Update(objProducto);
+                await _context.SaveChangesAsync();
+                
+            }
+            catch(DbUpdateConcurrencyException){
+                return NotFound();
+            }
+           
+            return RedirectToAction(nameof(Index));
+            }
+
+            return View (objProducto);
+
+        }
+        //editar
+
+         
+
     
     }
 }
