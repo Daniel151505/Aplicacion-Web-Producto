@@ -47,5 +47,21 @@ namespace AplicacionWebProducto.Controllers
         }
 
         
+        [HttpPost]
+        public IActionResult Registrar (Producto objProducto){
+
+           if(ModelState.IsValid){
+
+                //Registrar
+               _context.Add(objProducto);
+               _context.SaveChanges();
+                //Registrar
+                return RedirectToAction(nameof(Index));   
+             }
+         
+         return View ("Registro",objProducto);
+
+        }
+    
     }
 }
