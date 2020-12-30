@@ -99,6 +99,32 @@ text-decoration: none;
 }
 
 
+/*Background NavBar*/
+
+.backgroundNavBar{
+
+background:#004A92;
+
+}
+
+.option {
+  padding-top: 6px;
+  text-align: center;
+}
+
+.option a{
+
+  color: white;
+  margin: 5px;
+
+}
+
+.option a:hover {
+
+  color: #EDC751;
+  text-decoration: none;
+
+}
 
 
 
