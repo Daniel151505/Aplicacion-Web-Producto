@@ -5,24 +5,29 @@
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
-     <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Contacto" asp-action="Listar" >Listar Contactos</a>
+     <li class="option">
+        <a  asp-area="" asp-controller="Contacto" asp-action="Listar" >Listar Contactos</a>
     </li>
-     <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Producto" asp-action="Index" >Productos registrados</a>
+     <li class="option">
+        <a asp-area="" asp-controller="Producto" asp-action="Index" >Productos registrados</a>
     </li>
-     <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Producto" asp-action="Registro" >Agregar Producto</a>
+     <li class="option">
+        <a  asp-area="" asp-controller="Producto" asp-action="Registro" >Agregar Producto</a>
     </li>
+     <li class="option">
+        <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Perfil</a>
+    </li>
+
+    
   
 }
 else
 {
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Contacto" asp-action="Index" >Contactenos</a>
+    <li class="option">
+        <a  asp-area="" asp-controller="Contacto" asp-action="Index" >Contactenos</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Producto" asp-action="Catalogo" >Catalogo de Productos</a>
+    <li class="option">
+        <a  asp-area="" asp-controller="Producto" asp-action="Catalogo" >Catalogo de Productos</a>
     </li>
    
 }
