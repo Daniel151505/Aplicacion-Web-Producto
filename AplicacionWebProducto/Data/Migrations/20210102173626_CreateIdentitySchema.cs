@@ -48,40 +48,6 @@ namespace AplicacionWebProducto.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "t_contacto",
-                columns: table => new
-                {
-                    id = table.Column<int>(nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    name = table.Column<string>(nullable: false),
-                    lastname = table.Column<string>(nullable: false),
-                    email = table.Column<string>(nullable: true),
-                    number = table.Column<int>(nullable: false),
-                    course = table.Column<string>(nullable: true),
-                    title = table.Column<string>(nullable: true),
-                    message = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_t_contacto", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "t_producto",
-                columns: table => new
-                {
-                    id = table.Column<int>(nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    name = table.Column<string>(nullable: false),
-                    image = table.Column<string>(nullable: false),
-                    price = table.Column<decimal>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_t_producto", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -241,12 +207,6 @@ namespace AplicacionWebProducto.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
-
-            migrationBuilder.DropTable(
-                name: "t_contacto");
-
-            migrationBuilder.DropTable(
-                name: "t_producto");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

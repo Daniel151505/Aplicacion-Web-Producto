@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-AplicacionWebProducto-04CE75F0-C4A2-4F0F-9DB9-6B40812A3825</UserSecretsId>
+    <UserSecretsId>aspnet-AplicacionWebProducto-842600C5-664E-466F-A845-BC505BD04224</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

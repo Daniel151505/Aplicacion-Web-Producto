@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AplicacionWebProducto.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210101032828_CreateIdentitySchema")]
+    [Migration("20210102173626_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,76 +20,6 @@ namespace AplicacionWebProducto.Data.Migrations
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn)
                 .HasAnnotation("ProductVersion", "3.1.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
-
-            modelBuilder.Entity("AplicacionWebProducto.Models.Contacto", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id")
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<string>("Course")
-                        .HasColumnName("course")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Email")
-                        .HasColumnName("email")
-                        .HasColumnType("text");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnName("lastname")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Message")
-                        .HasColumnName("message")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnName("name")
-                        .HasColumnType("text");
-
-                    b.Property<int>("Number")
-                        .HasColumnName("number")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Title")
-                        .HasColumnName("title")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("t_contacto");
-                });
-
-            modelBuilder.Entity("AplicacionWebProducto.Models.Producto", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id")
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnName("image")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnName("name")
-                        .HasColumnType("text");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnName("price")
-                        .HasColumnType("numeric");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("t_producto");
-                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
