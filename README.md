@@ -33,12 +33,16 @@ https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/3.1.4
 
 https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL/3.1.4
 
-# Despues de instalar paquetes
+# Si descargas el proyecto y no quieres instalar los paquetes
+
+Ejecuta en la consola: dotnet restore
+Para que se te instalen automaticamente
+# Despues de instalar paquetes (Vistas de Login, ForgotPassword, etc)
 
 Ejecutar la siguiente instrucción: 
 dotnet aspnet-codegenerator identity -dc AplicacionWebProducto.Data.ApplicationDbContext --files "Account.vista que quieren"
 
-# Instalar herramienta
+# Instalar herramienta (dotnet ef)
 
 https://docs.microsoft.com/en-us/ef/core/cli/dotnet
 
