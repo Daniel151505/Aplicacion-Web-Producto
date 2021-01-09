@@ -1,7 +1,8 @@
 # Aplicacion-Web-Producto
 Aplicación Web Producto - Estructura MVC - ASP.NET Core
 
-
+# Visualiza la Aplicación Web
+https://app-proyecto-cursoprogra.herokuapp.com/
 
 # Creación de proyecto 
 
@@ -40,7 +41,7 @@ Para que se te instalen automaticamente
 # Despues de instalar paquetes (Vistas de Login, ForgotPassword, etc)
 
 Ejecutar la siguiente instrucción: 
-dotnet aspnet-codegenerator identity -dc AplicacionWebProducto.Data.ApplicationDbContext --files "Account.vista que quieren"
+dotnet aspnet-codegenerator identity -dc La Carpeta donde esta alojado tu Aplicación Web .Data.ApplicationDbContext --files "Account.vista que quieren"
 
 # Instalar herramienta (dotnet ef)
 
